@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google play store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            height: fit-content;
+        }
+
+        body {
+            background-color: #f0f0f0;
+           
+
+        }
+
+        header {
+            display: flex;
+            border: none;
+            outline: none;
+
+        }
+
+        .logo img {
+
+            height: 47px;
+            width: 187px;
+        }
+
+        input {
+
+            height: 28px;
+            border: none;
+            outline: none;
+            width: 650px;
+        }
+
+        input:hover {
+            border-radius: 19px;
+            outline: lightblue;
+            border: 2px solid lightblue;
+
+        }
+
+        .search-box {
+            position: relative;
+            top: 12px;
+            left: 12px;
+        }
+
+        .searchlogo img {
+            position: relative;
+            left: 13px;
+            top: 12px;
+            height: 28px;
+        }
+
+
+        .menu img {
+            height: 23px;
+            position: relative;
+            top: 17px;
+            width: 24px;
+            left: 320px;
+
+        }
+
+        .profileimg img {
+            position: relative;
+            top: 7px;
+            left: 345px;
+            border-radius: 50%;
+            height: 39px;
+            width: 34px
+        }
+
+        nav {
+            display: flex;
+            position: sticky;
+            top: -5px;
+            z-index: 999;
+        }
+
+        .Apps {
+            background-color: #2fcc2f;
+            display: flex;
+            margin: 5px 0px 0px -7px;
+            height: 49px;
+            width: 220px;
+        }
+
+        .Apps img {
+
+            height: 24px;
+            filter: invert(100%);
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 61px;
+            position: relative;
+            left: 15px;
+            top: 20%;
+
+        }
+
+        .Apps p {
+            position: relative;
+            top: -10px;
+            left: 10px;
+            padding: 20px 7px;
+            font-size: 21px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+
+
+        }
+
+        .Apps p a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            height: 20px;
+
+        }
+
+        .Catagories {
+            background-color: #ffffff;
+
+
+            margin: 5px 0px 0px -7px;
+            height: 49px;
+            width: 172px;
+
+
+        }
+
+        ul.dropdown {
+            display: none;
+            z-index: 999;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+            margin-top: 2px;
+            margin-left: 0px;
+
+            width: 100%;
+            margin-right: 20px;
+            background-color: white;
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul li:hover ul.dropdown li a {
+            display: flex;
+            border-bottom: 2px solid lightslategray;
+            align-items: center;
+            height: 30px;
+            border-top: 2px solid lightslategray;
+            justify-content: center;
+            width: 100%;
+
+            background-color: white;
+        }
+
+        ul li:hover ul.dropdown li a:hover {
+
+
+            background-color: lightgoldenrodyellow;
+
+        }
+
+        .h {
+            display: inline-block;
+
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 14px;
+            margin-bottom: 5px;
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 24px;
+        }
+
+        .navline2 .questionmark {
+            display: flex;
+        }
+
+        .nav-bar2 {
+            background-color: #ffffff;
+
+            margin: 5px 0px 0px -7px;
+            height: 49px;
+            width: 916px;
+
+
+        }
+
+        .nav-bar2 ul {
+            display: flex;
+            margin-top: 1px;
+
+            margin-left: 7px;
+        }
+
+        .nav-bar2 ul li a {
+            padding: 14px 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 19px;
+            font-size: 15px;
+
+            display: inline-block;
+            letter-spacing: 0.2px;
+
+        }
+
+        .navigation9 {
+            display: flex;
+            position: sticky;
+
+
+        }
+
+        .hhh {
+            display: flex;
+        }
+
+        .nav-bar2 ul li a:hover {
+            border-bottom: 4px solid green;
+
+
+            border-bottom-left-radius: 99px;
+            border-bottom-right-radius: 99px;
+
+
+        }
+
+        hr {
+            z-index: 999;
+            height: 36px;
+            margin-left: -5px;
+            margin-top: 11px;
+        }
+
+        .questionmark img {
+            height: 20px;
+            width: 24px;
+            position: relative;
+            padding: 4px;
+            top: 13px;
+            border: 1px solid #e8e8e8;
+            left: 550px;
+            right: 0px;
+        }
+
+        .setting img {
+            height: 27px;
+            width: 24px;
+            position: relative;
+            padding: 0px 8px;
+            top: 13px;
+            border: 1px solid #e8e8e8;
+            left: 560px;
+            right: 0px;
+            margin-left: 5px;
+
+        }
+
+        /* bodymain */
+        .bodymain {
+            display: flex;
+        }
+
+
+        /* aside */
+        /* Primary class */
+        .items a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 19px;
+        }
+
+        aside {
+
+            width: 205px;
+            background-color: rgb(255, 246, 246);
+            margin: 2px 0px 0px 0px;
+            box-shadow: 0 0 19px #dddddd;
+            clip-path: inset(0px -19px -15px 0px);
+
+
+        }
+
+
+        #myapps {
+            padding-top: 10px;
+        }
+
+        .dropdownit a#Myapps {
+
+
+            display: flex;
+            width: 150px;
+            font-size: 21px;
+            margin-left: 1px;
+            align-items: center;
+            justify-content: center;
+
+            height: 20px;
+
+
+
+
+            text-decoration: none;
+            color: rgb(119, 127, 135);
+        }
+
+        .dropdownit a#Shop {
+            text-decoration: none;
+
+
+            margin-left: -16px;
+            color: #2fcc2f;
+
+            position: relative;
+            top: 20px;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            width: 150px;
+        }
+
+
+        .line {
+            border: 1px solid lightgray;
+
+            margin-top: 40px;
+            width: 150px;
+            margin-bottom: 20px;
+            margin-left: 26px;
+        }
+
+
+        /* secondsec */
+        #Games {
+
+            padding-top: 8px;
+            font-size: 16px;
+            position: relative;
+
+            margin-left: 32px;
+
+        }
+
+        #Kids {
+
+            margin-left: 32px;
+            top: 13px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        #Editor {
+            margin-left: 32px;
+            position: relative;
+            font-size: 16px;
+            top: 33px;
+        }
+
+        #Line {
+            width: 204px;
+            margin-left: 0;
+            position: relative;
+            top: 30px;
+            margin-right: 0;
+        }
+
+        /* Third scetion */
+        .thirdsec {
+            background-color: #f0f0f0;
+
+            height: 250px;
+            position: relative;
+            top: 0px;
+
+
+        }
+
+        /* Primary class 3 */
+        .Third {
+            font-size: 15px !important;
+        }
+
+        #account {
+
+            position: relative;
+            top: 9px;
+        }
+
+        #Payment {
+            position: relative;
+            top: 20px;
+        }
+
+        #subscriptions {
+            position: relative;
+            top: 32px;
+        }
+
+        #reddem {
+            position: relative;
+            top: 43px;
+        }
+
+        #Wishlist {
+            position: relative;
+            top: 54px;
+        }
+
+        #play {
+            position: relative;
+            top: 65px;
+        }
+
+        #Guide {
+            position: relative;
+            top: 76px;
+        }
+
+        /* Primary class font */
+        .bodymain {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+        }
+
+        /* Recommended */
+        h1.recommended {
+            font-weight: 400;
+            margin: 5vh 0px 0px 2vw;
+
+            height: 5vh;
+            font-size: 23px;
+        }
+
+        .seemore {
+            background-color: #2fcc2f;
+            color: white;
+            position: relative;
+            border: none;
+            height: 33px;
+            border-radius: 5px;
+            width: 82px;
+            left: 100%;
+            top: -37px;
+        }
+
+        .seemore a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .cardsection {
+            margin-left: 0px;
+            display: flex;
+        }
+
+        /* Primary class card */
+
+        .card {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 140px;
+            position: absolute;
+            background-color: white;
+            height: 224px !important;
+            
+            top: 29vh;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: lightslategray;
+        }
+
+        .card p {
+            color: lightslategray;
+            margin-left: 8px;
+            height: 5px;
+            padding-top: 12px;
+            margin-top: 2px;
+        }
+
+        .card img {
+            height: 116px;
+            width: 130px;
+            margin-left: 10px;
+
+        }
+
+        /* cardscetion */
+        #card1 {
+            position: absolute;
+            top: 29vh;
+
+            left: 17.7vw;
+
+
+
+        }
+
+        #card1 {
+            width: 145px;
+            background-color: white;
+            height: 214px;
+        }
+
+        #card1 p {
+            background-color: white;
+            height: 5px;
+            padding-top: 12px;
+            margin-top: 2px;
+            font-size: 16px;
+            color: lightslategray;
+
+
+
+
+        }
+
+        #card1 img {
+            height: 107px;
+            width: 110px;
+            margin-left: 15px;
+            margin-bottom: 12px;
+
+
+        }
+
+        #card2 {
+            top: 29vh;
+            left: 29.4vw;
+        }
+
+        /* Card3 */
+        #card3 {
+            top: 29vh;
+            left: 40.8vw;
+        }
+
+        #card3 img {
+            height: 122px;
+            margin-bottom: -6px;
+        }
+
+        /* card4 */
+        #card4 {
+            left: 52.2vw;
+        }
+
+        /* card5 */
+
+        #card5 {
+            left: 63.5vw;
+        }
+
+        /* card6 */
+        #card6 {
+            left: 75vw;
+
+        }
+
+        /* card7 */
+        #card7 {
+            left: 86.5vw;
+        }
+
+
+        .update {
+            position: relative;
+            top: 35vh;
+            font-weight: 500;
+            left: 20px;
+            font-size: 26px;
+        }
+        /* cardarea */
+       .cardarea{
+        display: flex;
+       }
+
+        /* Primary class image s2 */
+
+        .cards2{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+            top: 40vh !important;
+            height: 224px;
+           
+            width: 140px;
+            position: relative;
+            background-color: white;
+            
+        }
+        .cards2 a {
+            text-decoration: none;
+            color: lightslategray;
+        }
+
+        .cards2 p {
+            color: lightslategray;
+            margin-left: 8px;
+            height: 5px;
+            padding-top: 12px;
+            margin-top: 2px;
+        }
+
+        .cards2 img {
+            height: 116px;
+            width: 130px;
+            margin-left: 10px;
+
+        }
+        /* c1 */
+
+        #c-1{
+            top: 88vh;
+            left: 26px;
+        }
+        /* c2 */
+        #c-2{
+            left: 2.7vw;
+        }
+
+        /* card3 */
+        #c-3{
+            left: 3.2vw;
+        }
+
+        /* c-4 */
+        #c-4{
+            left: 3.7vw;
+        }
+
+        /* card5 */
+        #c-5{
+            left: 4.3vw;
+        }
+
+        /* c-6 */
+        #c-6{
+            left: 5.1vw;
+        }
+
+        /* card7 */
+        #c-7{
+            left: 5.9vw;
+        }
+
+
+        section a{
+            text-decoration: none;
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="search-box">
+            <input type="search" name="" id="" placeholder="Search for apps and games">
+
+        </div>
+        <div class="searchlogo">
+            <img src="search box.png" alt="">
+        </div>
+        <div class="menu">
+            <a href="">
+                <img src="https://cdn3.iconfinder.com/data/icons/essentials-set-2/17/007-menu-1024.png" alt="">
+            </a>
+        </div>
+        <div class="profileimg">
+            <a href=""><img
+                    src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="">
+            </a>
+        </div>
+    </header>
+    <nav>
+        <div class="navigation9">
+            <div class="Apps">
+                <img src="https://www.svgrepo.com/show/3577/apps.svg" alt="">
+                <p><a href="">Apps</a></p>
+            </div>
+            <div class="Catagories">
+                <ul class="Cheading">
+                    <li id="headingC"><a class="h" href="">Catagories
+                            <img style="height: 16px;width: 28px;"
+                                src="https://www.svgrepo.com/show/509905/dropdown-arrow.svg" alt="">
+                        </a>
+                        <ul class="dropdown">
+                            <li class="item"><a href="">Games</a></li>
+                            <li class="item"><a href="">Action</a></li>
+                            <li class="item"><a href="">Kids</a></li>
+                            <li class="item"><a href="">Call of duty</a></li>
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <hr>
+
+            <div class="nav-bar2">
+                <div class="hhh">
+                    <ul>
+                        <li><a href="https://bubblix.blogspot.com">Home</a></li>
+                        <li><a href="">Top Charts</a></li>
+                        <li><a href="">Releases</a></li>
+                    </ul>
+                    <div class="questionmark">
+                        <a href=""><img src="https://www.svgrepo.com/show/479055/question-mark-outline.svg" alt=""></a>
+                    </div>
+                    <div class="setting">
+                        <a href=""><img src="https://www.svgrepo.com/show/520935/setting-5.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="bodymain">
+        <aside class="dropdownit">
+            <div class="firstsec">
+                <div class="items" id="myapps">
+                    <p><a class="items" id="Myapps" href="">My Apps</a></p>
+                </div>
+                <div class="items" id="shop">
+                    <p><a class="Items active" id="Shop" href="">Shop</a></p>
+                </div>
+            </div>
+            <div class="line"></div>
+
+            <div class="secondsec">
+                <div class="items" id="games">
+                    <p><a class="Items" id="Games" href="">Games</a></p>
+                </div>
+                <div class="items" id="kids">
+                    <p><a class="Items" id="Kids" href="">Kids</a></p>
+                </div>
+                <div class="items" id="editor">
+                    <p><a class="Items" id="Editor" href="">Editors' Choice</a></p>
+                </div>
+            </div>
+            <div class="line" id="Line"></div>
+            <div class="thirdsec">
+                <div class="items third" id="account">
+                    <p><a class="Items Third" id="Account" href="">Account</a></p>
+                </div>
+                <div class="items third" id="payment">
+                    <p><a class="Items Third" id="Payment" href="">Payments Methods</a></p>
+                </div>
+                <div class="items third" id="subscriptions">
+                    <p><a class="Items Third" id="Subscriptions" href="">My Subscriptions</a></p>
+                </div>
+                <div class="items third" id="reddem">
+                    <p><a class="Items Third" id="Reddem" href="">Reddem</a></p>
+                </div>
+                <div class="items third" id="wishlist">
+                    <p><a class="Items Third" id="Wishlist" href="">My Wishlist</a></p>
+                </div>
+                <div class="items third" id="play">
+                    <p><a class="Items Third" id="Play" href="">My Play Activity</a></p>
+                </div>
+                <div class="items third" id="guide">
+                    <p><a class="Items Third" id="Guide" href="">Parent Guide</a></p>
+                </div>
+
+
+
+            </div>
+
+
+        </aside>
+        <section class="bodymain2">
+            <h1 class="recommended">Recommended for you</h1>
+            <button class="seemore"><a href="">See More</a></button>
+
+            <div class="cardsection">
+                <a href=""><div class="card" id="card1">
+                <img class="image1" src="img1.png" alt="">
+                    <p class="gamename">Glitter dress color</p>
+                    <p class="baramglass" style="font-size: 12px;">Baram glass</p>
+
+                </div></a>
+                <a href=""><div class="card" id="card2">
+                <img class="image1" src="img2.png" alt="">
+                    <p class="gamename"><a href="">Stack Ball-Blast</a></p>
+                    <p class="baramglass" style="font-size: 12px;"><a href="">Baram glass</a></p>
+
+                </div></a>
+                <a href=""><div class="card" id="card3">
+                <img class="image1" src="img3.png" alt="">
+                    <p class="gamename"><a href="">Ice Cream Inc</a></p>
+                    <p class="baramglass" style="font-size: 12px;"><a href="">Tap Nation</a></p>
+
+                </div></a>
+                <a href=""><div class="card" id="card4">
+                <img class="image1" src="img4.png" alt="">
+                    <p class="gamename"><a href="">Ice Cream Inc</a></p>
+                    <p class="baramglass" style="font-size: 12px;"><a href="">Tap Nation</a></p>
+
+                </div></a>
+                <a href=""><div class="card" id="card5">
+                <img class="image1" src="img5.png" alt="">
+                    <p class="gamename"><a href="">Ice Cream Inc</a></p>
+                    <p class="baramglass" style="font-size: 12px;"><a href="">Tap Nation</a></p>
+
+                </div></a>
+                <a href=""><div class="card" id="card6">
+                <img class="image1" src="img6.png" alt="">
+                    <p class="gamename"><a href="">Ice Cream Inc</a></p>
+                    <p class="baramglass" style="font-size: 12px;"><a href="">Tap Nation</a></p>
+
+                </div></a>
+                <a href=""><div class="card" id="card7">
+                <img class="image1" src="img7.png" alt="">
+                    <p class="gamename"><a href="">Ice Cream Inc</a></p>
+                    <p class="baramglass" style="font-size: 12px;"><a href="">Tap Nation</a></p>
+
+                </div></a>
+            </div>
+            <br>
+
+            <div class="cardsection2">
+                <div class="updatedhead">
+                    <h1 class="update">Just Updated</h1>
+                    <p class="features" style="position: relative;top: 36vh;color: lightslategray;left: 20px;
+                    font-size: 17px;">
+                        Fresh features&content
+                    </p>
+                    <button class="seemore" style="top: 29vh !important;"><a href="">See More</a></button>
+                    <div class="cardarea">
+                        <a href=""><div class="cards2" id="c-1">
+                        <div class="c1image">
+                                <img class="c1Image" src="img8.png" alt="">
+                                <p class="name">Toon Me-Cartoon</p>
+                                <p class="company" style="font-size: 12px;">Linerock Investments</p>
+                            </div></a>
+                          
+
+                        </div>
+                        <a href=""><div class="cards2" id="c-2">
+                        <img class="c1Image" src="img9.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+</a>
+                        </div>
+                        <a href=""><div class="cards2" id="c-3">
+                        <img class="c1Image" src="img10.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-4">
+                        <img class="c1Image" src="img11.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-5">
+                        <img class="c1Image" src="img12.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-6">
+                        <img class="c1Image" src="img13.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-7">
+                        <img class="c1Image" src="img14.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="cardsection2">
+                <div class="updatedhead">
+                    <h1 class="update" style="top: 44vh !important;font-size: 23px;">Check the Weather</h1>
+                    <button class="seemore" style="top: 39vh !important;"><a href="">See More</a></button>
+                    
+                    <div class="cardarea">
+                        <a href=""><div class="cards2" id="c-1" style="top: 47vh !important;">
+                        <div class="c1image">
+                                <img class="c1Image" src="img15.png" alt="">
+                                <p class="name">Toon Me-Cartoon</p>
+                                <p class="company" style="font-size: 12px;">Linerock Investments</p>
+                            </div></a>
+                          
+
+                        </div>
+                        <a href=""><div class="cards2" id="c-2" style="top: 47vh !important;">
+                        <img class="c1Image" src="img16.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+</a>
+                        </div>
+                        <a href=""><div class="cards2" id="c-3" style="top: 47vh !important;">
+                        <img class="c1Image" src="img17.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-4" style="top: 47vh !important;">
+                        <img class="c1Image" src="img18.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-5" style="top: 47vh !important;">
+                        <img class="c1Image" src="img19.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-6" style="top: 47vh !important;">
+                        <img class="c1Image" src="img20.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+                        <a href=""><div class="cards2" id="c-7" style="top: 47vh !important;">
+                        <img class="c1Image" src="img20.png" alt="">
+                            <p class="name">Toon Me-Cartoon</p>
+                            <p class="company" style="font-size: 12px;">Linerock Investments</p>
+
+                        </div></a>
+
+                    </div>
+
+                </div>
+            </div>
+           
+        </section>
+
+    </div>
+
+</body>
+
+</html>
